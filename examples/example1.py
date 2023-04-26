@@ -11,6 +11,8 @@ import imageio
 
 import neural_renderer as nr
 
+bVerbose = True
+
 current_dir = os.path.dirname(os.path.realpath(__file__))
 data_dir = os.path.join(current_dir, 'data')
 
@@ -42,10 +44,17 @@ def main():
 
     # draw object
     loop = tqdm.tqdm(range(0, 360, 4))
+    loop = tqdm.tqdm(range(0, 4, 4))
     writer = imageio.get_writer(args.filename_output, mode='I')
+    if bVerbose:
+        # print(f'type(writer): {type(writer)}')
+        pass
     for num, azimuth in enumerate(loop):
         loop.set_description('Drawing')
         renderer.eye = nr.get_points_from_angles(camera_distance, elevation, azimuth)
+        if bVerbose:
+            pass
+            print(f'renderer.eye: {renderer.eye}')
         images, _, _ = renderer(vertices, faces, textures)  # [batch_size, RGB, image_size, image_size]
         image = images.detach().cpu().numpy()[0].transpose((1, 2, 0))  # [image_size, image_size, RGB]
         writer.append_data((255*image).astype(np.uint8))
