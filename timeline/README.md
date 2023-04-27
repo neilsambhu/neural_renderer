@@ -16,3 +16,7 @@ grep -r --exclude-dir=timeline --exclude *README.md --exclude outgrep.txt -e "Re
 neural_renderer/renderer.py:class Renderer(nn.Module):
 ```
 4/27/2023 12:58:03 PM: `example1.py renderer = nr.Renderer(camera_mode='look_at')` does not call `renderer.py`  
+4/27/2023 1:00:39 PM: TODO: grep to find parameter "camera_mode" of Renderer constructor. 
+```
+grep -r --exclude-dir=timeline --exclude *README.md --exclude outgrep.txt -e "camera_mode" |& tee outgrep.txt
+```
