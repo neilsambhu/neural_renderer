@@ -20,3 +20,16 @@ neural_renderer/renderer.py:class Renderer(nn.Module):
 ```
 grep -r --exclude-dir=timeline --exclude *README.md --exclude outgrep.txt -e "camera_mode" |& tee outgrep.txt
 ```
+4/27/2023 1:36:07 PM: find source file of neural_renderer
+```
+(neural_renderer_from_DAS) [nsambhu@localhost github]$ python
+Python 3.7.13 (default, Mar 29 2022, 02:18:16) 
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import neural_renderer
+>>> import inspect
+>>> inspect.getfile(neural_renderer)
+'/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/__init__.py'
+>>> inspect.getsourcefile(neural_renderer)
+'/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/__init__.py'
+```
