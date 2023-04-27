@@ -4,3 +4,7 @@
 4/25/2023 4:17:44 PM: TODO: make a copy of conda environment dualattentionattack.  
 4/25/2023 4:26:10 PM: environment works.  
 4/26/2023 12:27:27 PM: running example1.py outputs `examples/data/example1.gif`. TODO: export single frame.  
+4/27/2023 11:49:52 AM: command for example.py
+```
+python examples/example1.py --filename_input examples/data/audi_et_te.obj --filename_output examples/data/example1-02.gif
+```
