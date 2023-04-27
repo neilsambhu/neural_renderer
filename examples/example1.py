@@ -40,7 +40,11 @@ def main():
     # to gpu
 
     # create renderer
+    if bVerbose:
+        print('100')
     renderer = nr.Renderer(camera_mode='look_at')
+    if bVerbose:
+        print('200');quit();
 
     # draw object
     loop = tqdm.tqdm(range(0, 360, 4))
