@@ -7,7 +7,7 @@ import numpy
 
 import neural_renderer as nr
 
-bVerbose = True
+bVerbose = False
 
 class Renderer(nn.Module):
     def __init__(self, image_size=256, anti_aliasing=True, background_color=[0,0,0],

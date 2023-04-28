@@ -41,10 +41,12 @@ def main():
 
     # create renderer
     if bVerbose:
-        print('100')
+        # print('100')
+        pass
     renderer = nr.Renderer(camera_mode='look_at')
     if bVerbose:
-        print('200');quit();
+        # print('200');
+        pass
 
     # draw object
     loop = tqdm.tqdm(range(0, 360, 4))
@@ -58,8 +60,9 @@ def main():
         renderer.eye = nr.get_points_from_angles(camera_distance, elevation, azimuth)
         if bVerbose:
             pass
-            print(f'renderer.eye: {renderer.eye}')
+            # print(f'renderer.eye: {renderer.eye}')
         images, _, _ = renderer(vertices, faces, textures)  # [batch_size, RGB, image_size, image_size]
+        quit();
         image = images.detach().cpu().numpy()[0].transpose((1, 2, 0))  # [image_size, image_size, RGB]
         writer.append_data((255*image).astype(np.uint8))
     writer.close()
