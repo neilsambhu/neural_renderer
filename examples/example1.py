@@ -45,7 +45,7 @@ def main():
         pass
     renderer = nr.Renderer(camera_mode='look_at')
     if bVerbose:
-        print('200');
+        print('101');
         pass
 
     # draw object
@@ -61,7 +61,13 @@ def main():
         if bVerbose:
             pass
             # print(f'renderer.eye: {renderer.eye}')
+        if bVerbose:
+            print('102');
+            pass
         images, _, _ = renderer(vertices, faces, textures)  # [batch_size, RGB, image_size, image_size]
+        if bVerbose:
+            print('103');
+            pass
         quit();
         image = images.detach().cpu().numpy()[0].transpose((1, 2, 0))  # [image_size, image_size, RGB]
         writer.append_data((255*image).astype(np.uint8))
