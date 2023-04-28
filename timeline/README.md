@@ -33,3 +33,4 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> inspect.getsourcefile(neural_renderer)
 '/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/__init__.py'
 ```
+4/28/2023 4:18:45 PM: TODO: find `example1.py renderer(vertices, faces, textures)` function call in `/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/renderer.py`

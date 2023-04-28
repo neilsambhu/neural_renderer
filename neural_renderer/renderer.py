@@ -19,8 +19,7 @@ class Renderer(nn.Module):
                  light_color_ambient=[1,1,1], light_color_directional=[1,1,1],
                  light_direction=[0,1,0]):
         super(Renderer, self).__init__()
-        if bVerbose:
-            print('100.1')
+
         # rendering
         self.image_size = image_size
         self.anti_aliasing = anti_aliasing

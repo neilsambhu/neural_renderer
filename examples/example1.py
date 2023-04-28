@@ -41,11 +41,11 @@ def main():
 
     # create renderer
     if bVerbose:
-        # print('100')
+        print('100')
         pass
     renderer = nr.Renderer(camera_mode='look_at')
     if bVerbose:
-        # print('200');
+        print('200');
         pass
 
     # draw object
