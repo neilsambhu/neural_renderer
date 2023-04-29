@@ -34,7 +34,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 '/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/__init__.py'
 ```
 4/28/2023 4:18:45 PM: TODO: find `example1.py renderer(vertices, faces, textures)` function call in `/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/renderer.py`  
-4/28/2023 4:29:41 PM: TODO: in `/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/renderer.py`,  print parameters of `def render(self, vertices, faces, textures, K=None, R=None, t=None, dist_coeffs=None, orig_size=None):`
+4/28/2023 4:29:41 PM: TODO: in `/home/nsambhu/anaconda3/envs/neural_renderer_from_DAS/lib/python3.7/site-packages/neural_renderer/renderer.py`,  print parameters of `def render(self, vertices, faces, textures, K=None, R=None, t=None, dist_coeffs=None, orig_size=None):`  
 4/29/2023 5:51:32 PM: input parameters
 ```
 vertices: tensor([[[-0.7776,  0.3186,  0.1152],
