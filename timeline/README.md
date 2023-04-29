@@ -143,3 +143,8 @@ textures: tensor([[[[[[1., 1., 1.],
            [[1., 1., 1.],
             [1., 1., 1.]]]]]], device='cuda:0')
 ```
+```
+vertices.shape: torch.Size([1, 13449, 3])
+faces.shape: torch.Size([1, 23145, 3])
+textures.shape: torch.Size([1, 23145, 2, 2, 2, 3])
+```
