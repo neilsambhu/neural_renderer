@@ -148,3 +148,6 @@ vertices.shape: torch.Size([1, 13449, 3])
 faces.shape: torch.Size([1, 23145, 3])
 textures.shape: torch.Size([1, 23145, 2, 2, 2, 3])
 ```
+4/29/2023 6:10:08 PM: `vertices` affects the zoom in or out from the object.  
+4/29/2023 6:11:49 PM: `faces` affects the quality of the curves of the object (i.e. smaller values result in a lower quality render).  
+4/29/2023 6:13:36 PM: `textures` affects the contrast in the appearance of the object (i.e. smaller values result in a light gray render; larger values result in a black-and-white render).  

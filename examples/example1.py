@@ -49,14 +49,14 @@ def main():
         pass
 
     # draw object
-    loop = tqdm.tqdm(range(0, 360, 4))
-    loop = tqdm.tqdm(range(0, 4, 4))
+    # loop = tqdm.tqdm(range(0, 360, 4))
+    loop = range(0, 4, 4)
     writer = imageio.get_writer(args.filename_output, mode='I')
     if bVerbose:
         # print(f'type(writer): {type(writer)}')
         pass
     for num, azimuth in enumerate(loop):
-        loop.set_description('Drawing')
+        # loop.set_description('Drawing')
         renderer.eye = nr.get_points_from_angles(camera_distance, elevation, azimuth)
         if bVerbose:
             pass
@@ -64,11 +64,15 @@ def main():
         if bVerbose:
             print('102');
             pass
+        # 4/29/2023 6:06:05 PM: multiply vertices, faces, and textures by scalar: start
+        # vertices = torch.mul(vertices,.5)
+        # faces = torch.mul(faces,.1)
+        textures = torch.mul(textures,.1)
+        # 4/29/2023 6:06:05 PM: multiply vertices, faces, and textures by scalar: end
         images, _, _ = renderer(vertices, faces, textures)  # [batch_size, RGB, image_size, image_size]
         if bVerbose:
             print('103');
             pass
-        quit();
         image = images.detach().cpu().numpy()[0].transpose((1, 2, 0))  # [image_size, image_size, RGB]
         writer.append_data((255*image).astype(np.uint8))
     writer.close()
