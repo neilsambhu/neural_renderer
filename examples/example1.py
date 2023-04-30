@@ -58,16 +58,20 @@ def main():
     for num, azimuth in enumerate(loop):
         # loop.set_description('Drawing')
         renderer.eye = nr.get_points_from_angles(camera_distance, elevation, azimuth)
+        # 4/29/2023 8:01:57 PM: understand parameters for renderer.eye: start
+        renderer.eye = nr.get_points_from_angles(camera_distance, elevation, 4*azimuth)
+        # 4/29/2023 8:01:57 PM: understand parameters for renderer.eye: end
         if bVerbose:
             pass
-            # print(f'renderer.eye: {renderer.eye}')
+            print(f'renderer.eye: {renderer.eye}')
+            print(f'type(renderer.eye): {type(renderer.eye)}')
         if bVerbose:
             print('102');
             pass
         # 4/29/2023 6:06:05 PM: multiply vertices, faces, and textures by scalar: start
         # vertices = torch.mul(vertices,.5)
         # faces = torch.mul(faces,.1)
-        textures = torch.mul(textures,.1)
+        # textures = torch.mul(textures,.1)
         # 4/29/2023 6:06:05 PM: multiply vertices, faces, and textures by scalar: end
         images, _, _ = renderer(vertices, faces, textures)  # [batch_size, RGB, image_size, image_size]
         if bVerbose:
