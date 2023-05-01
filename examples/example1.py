@@ -27,7 +27,7 @@ def main():
     # other settings
     camera_distance = 2.732
     elevation = 30
-    texture_size = 2
+    texture_size = 6
 
     # load .obj
     vertices, faces = nr.load_obj(args.filename_input)
@@ -59,7 +59,7 @@ def main():
         # loop.set_description('Drawing')
         renderer.eye = nr.get_points_from_angles(camera_distance, elevation, azimuth)
         # 4/29/2023 8:01:57 PM: understand parameters for renderer.eye: start
-        renderer.eye = nr.get_points_from_angles(camera_distance, elevation, 4*azimuth)
+        # renderer.eye = nr.get_points_from_angles(2*camera_distance, elevation, azimuth)
         # 4/29/2023 8:01:57 PM: understand parameters for renderer.eye: end
         if bVerbose:
             pass
